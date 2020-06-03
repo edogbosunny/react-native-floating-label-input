@@ -173,14 +173,15 @@ class FloatingLabelInput extends Component<Props> {
       : makeInvisibleWhite;
 
     const customLabelStyles = {
-      leftFocused: 15,
-      leftBlurred: 30,
-      topFocused: 0,
-      topBlurred: 12.5,
+      leftFocused: 10,
+      leftBlurred: 10,
+      topFocused: -7,
+      topBlurred: 15,
       fontSizeFocused: 10,
       fontSizeBlurred: 14,
-      colorFocused: '#49658c',
-      colorBlurred: '#49658c',
+      colorFocused: '#3D45F4',
+      colorBlurred: 'rgb(52, 67, 86)',
+    
       ...this.props.customLabelStyles,
     };
 
@@ -199,6 +200,9 @@ class FloatingLabelInput extends Component<Props> {
       color: !this.state.isFocused
         ? customLabelStyles.colorBlurred
         : customLabelStyles.colorFocused,
+      // backgroundColor: !this.state.isFocused
+      // ? 'transparent'
+      // : '#fff',
       ...this.props.labelStyles,
     };
 
@@ -211,14 +215,17 @@ class FloatingLabelInput extends Component<Props> {
     const containerStyles: Object = {
       height: 50,
       color: '#49658c',
-      borderColor: '#49658c',
+      // borderColor: '#49658c',
       borderWidth: 2,
       borderRadius: 30,
-      backgroundColor: '#00000000',
+      backgroundColor: '#fff',
       paddingTop: 10,
       paddingBottom: 10,
       alignContent: 'center',
       justifyContent: 'center',
+      borderColor: !this.state.isFocused
+        ? '#34435670'
+        : '#EDAF0898',
       ...this.props.containerStyles,
     };
 
